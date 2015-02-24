@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>yskmt - statistics</title>
+        <title>Applied Predictive Modeling: Day 4</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -15,41 +15,47 @@
                 <h1><a href="/">yskmt </a></h1>
                 <nav><ul>
                     <li><a href="/category/blog.html">Blog</a></li>
-                    <li><a href="/category/learning.html">Learning</a></li>
+                    <li class="active"><a href="/category/learning.html">Learning</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/apm-day4.html" rel="bookmark"
+           title="Permalink to Applied Predictive Modeling: Day 4">Applied Predictive Modeling: Day 4</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/apm-day2.html">Applied Predictive Modeling: Day 2</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2015-02-19T01:39:00+01:00">
-                Published: Thu 19 February 2015
+        <abbr class="published" title="2015-02-24T00:20:00+01:00">
+                Published: Tue 24 February 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/yskmt.html">yskmt</a>
         </address>
 <p>In <a href="/category/learning.html">Learning</a>. </p>
-<p>tags: <a href="/tag/statistics.html">statistics</a> <a href="/tag/predictive-modeling.html">predictive modeling</a> </p>
-</footer><!-- /.post-info --><!-- Status: draft -->
+<p>tags: <a href="/tag/.html"></a> </p>
+</footer><!-- /.post-info -->      <!-- Status: draft -->
 
-<p>I have started reading this book
-<a href="http://appliedpredictivemodeling.com/">"Applied Predictive Modeling"</a>
-to enhance my knowledge of statistic, machine learnig, predictive
-modeling, etc. I will keep some notes to myself.</p>
+<h1>Ch4: Over-Fitting and Model Tuning</h1>
+<h2>Resampling methods in caret package:</h2>
 <ul>
-<li>Bias vs variance tradeoff.<ul>
-<li><a href="http://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">http://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff</a></li>
-<li><a href="http://scott.fortmann-roe.com/docs/BiasVariance.html">http://scott.fortmann-roe.com/docs/BiasVariance.html</a></li>
+<li>boot: bootstrap</li>
+<li>boot632: 0.632 bootstrap</li>
+<li>cv: cross validation</li>
+<li>repeatedcv: repeated cross validation</li>
+<li>LOOCV: leave-one-out cross validation</li>
+<li>LGOCV: leave-group-out cross validation (Monte Carlo cross validation)</li>
+<li>oob: out-of-bag estimation</li>
 </ul>
-</li>
-<li>One-standard error method (pg 75).</li>
-</ul>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
+<p><a href="http://stats.stackexchange.com/questions/17602/caret-re-sampling-methods">ref</a></p>
+<h2><a href="http://en.wikipedia.org/wiki/Cohen%27s_kappa">Cohen's kappa statistics</a></h2>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
