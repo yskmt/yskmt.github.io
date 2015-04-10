@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>yskmt</title>
+        <title>Applied Predictive Modeling: Day 5</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -15,34 +15,45 @@
                 <h1><a href="/">yskmt </a></h1>
                 <nav><ul>
                     <li><a href="/category/blog.html">Blog</a></li>
-                    <li><a href="/category/learning.html">Learning</a></li>
+                    <li class="active"><a href="/category/learning.html">Learning</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
-<h1>Archives for yskmt</h1>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/apm-day6.html" rel="bookmark"
+           title="Permalink to Applied Predictive Modeling: Day 5">Applied Predictive Modeling: Day 5</a></h1>
+    </header>
 
-<dl>
-    <dt>Thu 09 April 2015</dt>
-    <dd><a href="/apm-day6.html">Applied Predictive Modeling: Day 5</a></dd>
-    <dt>Tue 10 March 2015</dt>
-    <dd><a href="/ml_10_lessons.html">ML Systems: 10 Lessons</a></dd>
-    <dt>Sun 08 March 2015</dt>
-    <dd><a href="/ml_norvig.html">Norvig's Presentation about ML for Programming</a></dd>
-    <dt>Thu 05 March 2015</dt>
-    <dd><a href="/useful_cli_apps.html">Useful CLI Apps</a></dd>
-    <dt>Thu 05 March 2015</dt>
-    <dd><a href="/apm-day5.html">Applied Predictive Modeling: Day 5</a></dd>
-    <dt>Tue 24 February 2015</dt>
-    <dd><a href="/split-repo.html">Splitting Git Repository</a></dd>
-    <dt>Tue 24 February 2015</dt>
-    <dd><a href="/apm-day4.html">Applied Predictive Modeling: Day 4</a></dd>
-    <dt>Fri 20 February 2015</dt>
-    <dd><a href="/apm-day3.html">Applied Predictive Modeling: Day 3</a></dd>
-    <dt>Thu 19 February 2015</dt>
-    <dd><a href="/apm-day2.html">Applied Predictive Modeling: Day 2</a></dd>
-    <dt>Thu 19 February 2015</dt>
-    <dd><a href="/first-post.html">First Post</a></dd>
-</dl>
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-09T21:01:00+02:00">
+                Published: Thu 09 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/yskmt.html">yskmt</a>
+        </address>
+<p>In <a href="/category/learning.html">Learning</a>. </p>
+<p>tags: <a href="/tag/.html"></a> </p>
+</footer><!-- /.post-info -->      <!-- Status: draft -->
+
+<h1>Ch6: Linear Regression and Its Cousins</h1>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Robust_regression">Robust regression</a><ul>
+<li>Normal least square regression is not robust against outliers.</li>
+<li>Use the L1 norm for residual computation.</li>
+<li>Huber approach: use L2 norm when the difference is small, L1 when
+  the difference is large.</li>
+<li>R: <em>rlm</em> function in <em>MASS</em> library.</li>
+</ul>
+</li>
+<li>Partial least squares (PLS)</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
 </section>
         <section id="extras" class="body">
                 <div class="blogroll">
