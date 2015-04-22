@@ -15,13 +15,96 @@
                 <h1><a href="/">yskmt </a></h1>
                 <nav><ul>
                     <li><a href="/category/blog.html">Blog</a></li>
+                    <li><a href="/category/etc.html">etc</a></li>
                     <li><a href="/category/learning.html">Learning</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/apm-day6.html">Applied Predictive Modeling: Day 5</a></h1>
+                    <h1 class="entry-title"><a href="/socks.html">SOCKS Proxy through SSH Tunneling</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-04-22T10:38:00+02:00">
+                Published: Wed 22 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/yskmt.html">yskmt</a>
+        </address>
+<p>In <a href="/category/etc.html">etc</a>. </p>
+<p>tags: <a href="/tag/proxy.html">proxy</a> <a href="/tag/socks.html">socks</a> </p>
+</footer><!-- /.post-info --><!-- Status: draft -->
+
+<h1>Objective:</h1>
+<p>Connect to internet via SOCKS proxy through another machine. It is
+particlarly useful when:</p>
+<ul>
+<li>The machine you are working on does not allow internet access, but
+  does allow ssh to other machines (which are connected to internet).</li>
+<li>You want to add an extra layer of security and privacy.</li>
+</ul>
+<h1>Method</h1>
+<p>Create a SOCKS proxy thourhg ssh tunneling.</p>
+<div class="highlight"><pre><span class="n">ssh</span> <span class="o">-</span><span class="n">D</span> <span class="n">LOCAL_PROXY_PORT</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">f</span> <span class="n">SSH_SERVER</span>
+</pre></div>
+
+
+<ul>
+<li>-D: Specifies a local ``dynamic'' application-level port forwarding.</li>
+<li>-N: Do not execute a remote command.</li>
+<li>-f: Requests ssh to go to background.</li>
+</ul>
+<p>Run a program thorugh a proxy server using
+<a href="http://proxychains.sourceforge.net/">proxychains</a>. Install
+proxychains and add the following to the end of
+<em>~/.proxychains/proxychains.conf</em>.</p>
+<div class="highlight"><pre><span class="n">socks5</span> <span class="mf">127.0.0.1</span> <span class="n">LOCAL_PROXY_PORT</span>
+</pre></div>
+
+
+<ul>
+<li>LOCAL_PROXY_PORT corresponds to the one that you specified in the
+  ssh command.</li>
+</ul>
+<p>Example uses:</p>
+<div class="highlight"><pre><span class="n">proxychains</span> <span class="n">wget</span> <span class="n">http</span><span class="o">:</span><span class="c1">//some-website</span>
+<span class="n">proxychains</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/som-repository</span>
+</pre></div>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/apm-day7.html" rel="bookmark"
+                           title="Permalink to Applied Predictive Modeling: Day 7">Applied Predictive Modeling: Day 7</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-16T20:48:00+02:00">
+                Published: Thu 16 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/yskmt.html">yskmt</a>
+        </address>
+<p>In <a href="/category/learning.html">Learning</a>. </p>
+<p>tags: <a href="/tag/.html"></a> </p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="/apm-day7.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/apm-day6.html" rel="bookmark"
+                           title="Permalink to Applied Predictive Modeling: Day 6">Applied Predictive Modeling: Day 6</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2015-04-09T21:01:00+02:00">
                 Published: Thu 09 April 2015
@@ -32,34 +115,10 @@
         </address>
 <p>In <a href="/category/learning.html">Learning</a>. </p>
 <p>tags: <a href="/tag/.html"></a> </p>
-</footer><!-- /.post-info --><!-- Status: draft -->
-
-<h1>Ch6: Linear Regression and Its Cousins</h1>
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Robust_regression">Robust regression</a><ul>
-<li>Normal least square regression is not robust against outliers.</li>
-<li>Use the L1 norm for residual computation.</li>
-<li>Huber approach: use L2 norm when the difference is small, L1 when
-  the difference is large.</li>
-<li>R: <em>rlm</em> function in <em>MASS</em> library.</li>
-</ul>
-</li>
-<li><a href="http://en.wikipedia.org/wiki/Partial_least_squares_regression">Partial least squares (PLS)</a><ul>
-<li><em>SIMPLS: An alternative approach to partial least squares
-  regression</em> by de Jong</li>
-</ul>
-</li>
-<li>Principal component analysis (PCA)<ul>
-<li>Eigenvalue decomposision of the data covariance matrix</li>
-<li>Singular value decomposition of the data matrix</li>
-</ul>
-</li>
-</ul>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="/apm-day6.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -214,53 +273,10 @@
                 <a class="readmore" href="/apm-day3.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/apm-day2.html" rel="bookmark"
-                           title="Permalink to Applied Predictive Modeling: Day 2">Applied Predictive Modeling: Day 2</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-02-19T01:39:00+01:00">
-                Published: Thu 19 February 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/yskmt.html">yskmt</a>
-        </address>
-<p>In <a href="/category/learning.html">Learning</a>. </p>
-<p>tags: <a href="/tag/statistics.html">statistics</a> <a href="/tag/predictive-modeling.html">predictive modeling</a> </p>
-</footer><!-- /.post-info -->                
-                <a class="readmore" href="/apm-day2.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/first-post.html" rel="bookmark"
-                           title="Permalink to First Post">First Post</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-02-19T01:19:00+01:00">
-                Published: Thu 19 February 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/yskmt.html">yskmt</a>
-        </address>
-<p>In <a href="/category/blog.html">Blog</a>. </p>
-<p>tags: <a href="/tag/blog.html">Blog</a> </p>
-</footer><!-- /.post-info -->                
-                <a class="readmore" href="/first-post.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
                 </ol><!-- /#posts-list -->
 <p class="paginator">
-    Page 1 / 1
+    Page 1 / 2
+        <a href="/index2.html">&raquo;</a>
 </p>
                 </section><!-- /#content -->
         <section id="extras" class="body">

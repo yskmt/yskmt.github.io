@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Applied Predictive Modeling: Day 4</title>
+        <title>SOCKS Proxy through SSH Tunneling</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -15,44 +15,66 @@
                 <h1><a href="/">yskmt </a></h1>
                 <nav><ul>
                     <li><a href="/category/blog.html">Blog</a></li>
-                    <li><a href="/category/etc.html">etc</a></li>
-                    <li class="active"><a href="/category/learning.html">Learning</a></li>
+                    <li class="active"><a href="/category/etc.html">etc</a></li>
+                    <li><a href="/category/learning.html">Learning</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="/apm-day4.html" rel="bookmark"
-           title="Permalink to Applied Predictive Modeling: Day 4">Applied Predictive Modeling: Day 4</a></h1>
+        <a href="/socks.html" rel="bookmark"
+           title="Permalink to SOCKS Proxy through SSH Tunneling">SOCKS Proxy through SSH Tunneling</a></h1>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2015-02-24T00:20:00+01:00">
-                Published: Tue 24 February 2015
+        <abbr class="published" title="2015-04-22T10:38:00+02:00">
+                Published: Wed 22 April 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/yskmt.html">yskmt</a>
         </address>
-<p>In <a href="/category/learning.html">Learning</a>. </p>
-<p>tags: <a href="/tag/.html"></a> </p>
+<p>In <a href="/category/etc.html">etc</a>. </p>
+<p>tags: <a href="/tag/proxy.html">proxy</a> <a href="/tag/socks.html">socks</a> </p>
 </footer><!-- /.post-info -->      <!-- Status: draft -->
 
-<h1>Ch4: Over-Fitting and Model Tuning</h1>
-<h2>Resampling methods in caret package:</h2>
+<h1>Objective:</h1>
+<p>Connect to internet via SOCKS proxy through another machine. It is
+particlarly useful when:</p>
 <ul>
-<li>boot: bootstrap</li>
-<li>boot632: 0.632 bootstrap</li>
-<li>cv: cross validation</li>
-<li>repeatedcv: repeated cross validation</li>
-<li>LOOCV: leave-one-out cross validation</li>
-<li>LGOCV: leave-group-out cross validation (Monte Carlo cross validation)</li>
-<li>oob: out-of-bag estimation</li>
+<li>The machine you are working on does not allow internet access, but
+  does allow ssh to other machines (which are connected to internet).</li>
+<li>You want to add an extra layer of security and privacy.</li>
 </ul>
-<p><a href="http://stats.stackexchange.com/questions/17602/caret-re-sampling-methods">ref</a></p>
-<h2><a href="http://en.wikipedia.org/wiki/Cohen%27s_kappa">Cohen's kappa statistics</a></h2>
+<h1>Method</h1>
+<p>Create a SOCKS proxy thourhg ssh tunneling.</p>
+<div class="highlight"><pre><span class="n">ssh</span> <span class="o">-</span><span class="n">D</span> <span class="n">LOCAL_PROXY_PORT</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">f</span> <span class="n">SSH_SERVER</span>
+</pre></div>
+
+
+<ul>
+<li>-D: Specifies a local ``dynamic'' application-level port forwarding.</li>
+<li>-N: Do not execute a remote command.</li>
+<li>-f: Requests ssh to go to background.</li>
+</ul>
+<p>Run a program thorugh a proxy server using
+<a href="http://proxychains.sourceforge.net/">proxychains</a>. Install
+proxychains and add the following to the end of
+<em>~/.proxychains/proxychains.conf</em>.</p>
+<div class="highlight"><pre><span class="n">socks5</span> <span class="mf">127.0.0.1</span> <span class="n">LOCAL_PROXY_PORT</span>
+</pre></div>
+
+
+<ul>
+<li>LOCAL_PROXY_PORT corresponds to the one that you specified in the
+  ssh command.</li>
+</ul>
+<p>Example uses:</p>
+<div class="highlight"><pre><span class="n">proxychains</span> <span class="n">wget</span> <span class="n">http</span><span class="o">:</span><span class="c1">//some-website</span>
+<span class="n">proxychains</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/som-repository</span>
+</pre></div>
     </div><!-- /.entry-content -->
 
   </article>

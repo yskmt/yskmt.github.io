@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>yskmt - predictive modeling</title>
+        <title>yskmt - socks</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -22,31 +22,54 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/apm-day2.html">Applied Predictive Modeling: Day 2</a></h1>
+                    <h1 class="entry-title"><a href="/socks.html">SOCKS Proxy through SSH Tunneling</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2015-02-19T01:39:00+01:00">
-                Published: Thu 19 February 2015
+        <abbr class="published" title="2015-04-22T10:38:00+02:00">
+                Published: Wed 22 April 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/yskmt.html">yskmt</a>
         </address>
-<p>In <a href="/category/learning.html">Learning</a>. </p>
-<p>tags: <a href="/tag/statistics.html">statistics</a> <a href="/tag/predictive-modeling.html">predictive modeling</a> </p>
+<p>In <a href="/category/etc.html">etc</a>. </p>
+<p>tags: <a href="/tag/proxy.html">proxy</a> <a href="/tag/socks.html">socks</a> </p>
 </footer><!-- /.post-info --><!-- Status: draft -->
 
-<p>I have started reading this book
-<a href="http://appliedpredictivemodeling.com/">"Applied Predictive Modeling"</a>
-to enhance my knowledge of statistic, machine learnig, predictive
-modeling, etc. I will keep some notes to myself.</p>
+<h1>Objective:</h1>
+<p>Connect to internet via SOCKS proxy through another machine. It is
+particlarly useful when:</p>
 <ul>
-<li>Bias vs variance tradeoff.<ul>
-<li><a href="http://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">http://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff</a></li>
-<li><a href="http://scott.fortmann-roe.com/docs/BiasVariance.html">http://scott.fortmann-roe.com/docs/BiasVariance.html</a></li>
+<li>The machine you are working on does not allow internet access, but
+  does allow ssh to other machines (which are connected to internet).</li>
+<li>You want to add an extra layer of security and privacy.</li>
 </ul>
-</li>
-<li>One-standard error method (pg 75).</li>
-</ul>                </article>
+<h1>Method</h1>
+<p>Create a SOCKS proxy thourhg ssh tunneling.</p>
+<div class="highlight"><pre><span class="n">ssh</span> <span class="o">-</span><span class="n">D</span> <span class="n">LOCAL_PROXY_PORT</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">f</span> <span class="n">SSH_SERVER</span>
+</pre></div>
+
+
+<ul>
+<li>-D: Specifies a local ``dynamic'' application-level port forwarding.</li>
+<li>-N: Do not execute a remote command.</li>
+<li>-f: Requests ssh to go to background.</li>
+</ul>
+<p>Run a program thorugh a proxy server using
+<a href="http://proxychains.sourceforge.net/">proxychains</a>. Install
+proxychains and add the following to the end of
+<em>~/.proxychains/proxychains.conf</em>.</p>
+<div class="highlight"><pre><span class="n">socks5</span> <span class="mf">127.0.0.1</span> <span class="n">LOCAL_PROXY_PORT</span>
+</pre></div>
+
+
+<ul>
+<li>LOCAL_PROXY_PORT corresponds to the one that you specified in the
+  ssh command.</li>
+</ul>
+<p>Example uses:</p>
+<div class="highlight"><pre><span class="n">proxychains</span> <span class="n">wget</span> <span class="n">http</span><span class="o">:</span><span class="c1">//some-website</span>
+<span class="n">proxychains</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/som-repository</span>
+</pre></div>                </article>
 <p class="paginator">
     Page 1 / 1
 </p>
