@@ -23,44 +23,37 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/theano:-logistic-regression.html">Theano: Logistic Regression</a></h1>
+                    <h1 class="entry-title"><a href="/apm-day6.html">Applied Predictive Modeling: Day 6</a></h1>
 <footer class="post-info">
-        <span>Tue 05 May 2015</span>
+        <span>Thu 09 April 2015</span>
 <span>| tags: <a href="/tag/.html"></a></span>
 </footer><!-- /.post-info --><!-- Status: draft -->
 
-<p>Starting to use <a href="http://www.deeplearning.net/software/theano/">Theano</a>
-and <a href="http://lasagne.readthedocs.org/en/latest/">Lasagne</a> for neural
-net. </p>
-<p>First trying to learn Theano through
-<a href="http://deeplearning.net/tutorial/contents.html">tutorial</a>.</p>
+<h1>Ch6: Linear Regression and Its Cousins</h1>
 <ul>
-<li>Logistic
-  <a href="http://deeplearning.net/tutorial/logreg.html">regression tutorial</a>
-  completed.</li>
-<li>Other NN tutorials:</li>
-<li>http://cs231n.github.io/</li>
-<li>http://neuralnetworksanddeeplearning.com/</li>
+<li><a href="http://en.wikipedia.org/wiki/Robust_regression">Robust regression</a><ul>
+<li>Normal least square regression is not robust against outliers.</li>
+<li>Use the L1 norm for residual computation.</li>
+<li>Huber approach: use L2 norm when the difference is small, L1 when
+  the difference is large.</li>
+<li>R: <em>rlm</em> function in <em>MASS</em> library.</li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Partial_least_squares_regression">Partial least squares (PLS)</a><ul>
+<li><em>SIMPLS: An alternative approach to partial least squares
+  regression</em> by de Jong</li>
+</ul>
+</li>
+<li>Principal component analysis (PCA)<ul>
+<li>Eigenvalue decomposision of the data covariance matrix</li>
+<li>Singular value decomposition of the data matrix</li>
+</ul>
+</li>
 </ul>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
                     <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/apm-day6.html" rel="bookmark"
-                           title="Permalink to Applied Predictive Modeling: Day 6">Applied Predictive Modeling: Day 6</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Thu 09 April 2015</span>
-<span>| tags: <a href="/tag/.html"></a></span>
-</footer><!-- /.post-info -->                
-                <a class="readmore" href="/apm-day6.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
 
             <li><article class="hentry">
                 <header>

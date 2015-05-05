@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Splitting Git Repository</title>
+        <title>yskmt - regression</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,32 +14,48 @@
         <header id="banner" class="body">
                 <h1><a href="/">yskmt </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="/category/blog.html">Blog</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
                     <li><a href="/category/etc.html">etc</a></li>
                     <li><a href="/category/learning.html">Learning</a></li>
                 </ul>
                 </nav>
         </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/split-repo.html" rel="bookmark"
-           title="Permalink to Splitting Git Repository">Splitting Git Repository</a></h1>
-    </header>
 
-    <div class="entry-content">
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/apm-day6.html">Applied Predictive Modeling: Day 6</a></h1>
 <footer class="post-info">
-        <span>Tue 24 February 2015</span>
-<span>| tags: <a href="/tag/git.html">git</a></span>
-</footer><!-- /.post-info -->      <!-- Status: draft -->
+        <span>Thu 09 April 2015</span>
+<span>| tags: <a href="/tag/apm.html">apm</a><a href="/tag/regression.html">regression</a><a href="/tag/pca.html">pca</a><a href="/tag/pls.html">pls</a></span>
+</footer><!-- /.post-info --><!-- Status: draft -->
 
-<p>Extract a subdirectory in a git repostory and create a new repository.</p>
-<p><a href="http://ariya.ofilabs.com/2014/07/extracting-parts-of-git-repository-and-keeping-the-history.html">http://ariya.ofilabs.com/2014/07/extracting-parts-of-git-repository-and-keeping-the-history.html</a></p>
-    </div><!-- /.entry-content -->
-
-  </article>
-</section>
+<h1>Ch6: Linear Regression and Its Cousins</h1>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Robust_regression">Robust regression</a><ul>
+<li>Normal least square regression is not robust against outliers.</li>
+<li>Use the L1 norm for residual computation.</li>
+<li>Huber approach: use L2 norm when the difference is small, L1 when
+  the difference is large.</li>
+<li>R: <em>rlm</em> function in <em>MASS</em> library.</li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Partial_least_squares_regression">Partial least squares (PLS)</a><ul>
+<li><em>SIMPLS: An alternative approach to partial least squares
+  regression</em> by de Jong</li>
+</ul>
+</li>
+<li>Principal component analysis (PCA)<ul>
+<li>Eigenvalue decomposision of the data covariance matrix</li>
+<li>Singular value decomposition of the data matrix</li>
+</ul>
+</li>
+</ul>                </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </aside><!-- /#featured -->
+            </ol><!-- /#posts-list -->
+            </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
