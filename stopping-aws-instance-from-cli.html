@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Applied Predictive Modeling: Day 2</title>
+        <title>Stopping AWS Instance from CLI</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,10 +14,10 @@
         <header id="banner" class="body">
                 <h1><a href="/">yskmt </a></h1>
                 <nav><ul>
-                    <li><a href="/category/aws.html">AWS</a></li>
+                    <li class="active"><a href="/category/aws.html">AWS</a></li>
                     <li><a href="/category/blog.html">Blog</a></li>
                     <li><a href="/category/etc.html">etc</a></li>
-                    <li class="active"><a href="/category/learning.html">Learning</a></li>
+                    <li><a href="/category/learning.html">Learning</a></li>
                 </ul>
                 </nav>
         </header><!-- /#banner -->
@@ -25,27 +25,28 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="/apm-day2.html" rel="bookmark"
-           title="Permalink to Applied Predictive Modeling: Day 2">Applied Predictive Modeling: Day 2</a></h1>
+        <a href="/stopping-aws-instance-from-cli.html" rel="bookmark"
+           title="Permalink to Stopping AWS Instance from CLI">Stopping AWS Instance from CLI</a></h1>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <span>Thu 19 February 2015</span>
-<span>| tags: <a href="/tag/statistics.html">statistics</a><a href="/tag/predictive-modeling.html">predictive modeling</a></span>
+        <span>Mon 11 May 2015</span>
+<span>| tags: <a href="/tag/cli.html">cli</a></span>
 </footer><!-- /.post-info -->      <!-- Status: draft -->
 
-<p>I have started reading this book
-<a href="http://appliedpredictivemodeling.com/">"Applied Predictive Modeling"</a>
-to enhance my knowledge of statistic, machine learnig, predictive
-modeling, etc. I will keep some notes to myself.</p>
 <ul>
-<li>Bias vs variance tradeoff.<ul>
-<li><a href="http://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">http://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff</a></li>
-<li><a href="http://scott.fortmann-roe.com/docs/BiasVariance.html">http://scott.fortmann-roe.com/docs/BiasVariance.html</a></li>
+<li>Setting up the AWS EC2 command line tools:<ul>
+<li>http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html#set_ec2_url_linux</li>
 </ul>
 </li>
-<li>One-standard error method (pg 75).</li>
+<li>Setting up the correct region for the CLI tool.<ul>
+<li>http://stackoverflow.com/questions/15969649/ec2-describe-instance-status-client-invalidinstanceid-notfound-but-i-know-instan</li>
+</ul>
+</li>
+<li>Secruity credential needs to be obtained.</li>
+<li>Using the CLI tools, I can probably schedule instance start/stopping
+  automatically.</li>
 </ul>
     </div><!-- /.entry-content -->
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Applied Predictive Modeling: Day 2</title>
+        <title>Imbalanced Datasets</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -25,27 +25,45 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="/apm-day2.html" rel="bookmark"
-           title="Permalink to Applied Predictive Modeling: Day 2">Applied Predictive Modeling: Day 2</a></h1>
+        <a href="/imbalanced-datasets.html" rel="bookmark"
+           title="Permalink to Imbalanced Datasets">Imbalanced Datasets</a></h1>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <span>Thu 19 February 2015</span>
-<span>| tags: <a href="/tag/statistics.html">statistics</a><a href="/tag/predictive-modeling.html">predictive modeling</a></span>
+        <span>Wed 20 May 2015</span>
+<span>| tags: <a href="/tag/blog.html">blog</a></span>
 </footer><!-- /.post-info -->      <!-- Status: draft -->
 
-<p>I have started reading this book
-<a href="http://appliedpredictivemodeling.com/">"Applied Predictive Modeling"</a>
-to enhance my knowledge of statistic, machine learnig, predictive
-modeling, etc. I will keep some notes to myself.</p>
+<h2><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5128907">Learning from Imbalanced Data</a></h2>
+<p>Good articles summarizing techniques to overcome imbalanced datasets.</p>
+<p><a href="http://www.reddit.com/r/MachineLearning/comments/12evgi/classification_when_80_of_my_training_set_is_of/">Reddit submission</a> about imbalanced datasets.</p>
+<h2>Some techniques for imbalanced datasets</h2>
 <ul>
-<li>Bias vs variance tradeoff.<ul>
-<li><a href="http://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">http://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff</a></li>
-<li><a href="http://scott.fortmann-roe.com/docs/BiasVariance.html">http://scott.fortmann-roe.com/docs/BiasVariance.html</a></li>
+<li>Samplign methods<ul>
+<li>over/under-sampling</li>
+<li>informed sampling</li>
 </ul>
 </li>
-<li>One-standard error method (pg 75).</li>
+<li>Data generation<ul>
+<li>SMOTE</li>
+<li>Adaptive synthetic sampling</li>
+<li>Sampling with data cleaning</li>
+</ul>
+</li>
+<li>Cluster-based sampling</li>
+<li>Sampling and boosting integration</li>
+<li>Cost-sensitive methods - introduction of weights </li>
+<li>Kernel-based methods</li>
+</ul>
+<h2>Assesment matrices for imbalanced datasets</h2>
+<ul>
+<li>Accuracy, error rate</li>
+<li>Confusion matrix - true positive, false positive, true negative,
+  false negative</li>
+<li>ROC curve</li>
+<li>Precision-Recall curve</li>
+<li>Cost curves </li>
 </ul>
     </div><!-- /.entry-content -->
 

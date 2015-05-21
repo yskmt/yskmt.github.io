@@ -14,6 +14,7 @@
         <header id="banner" class="body">
                 <h1><a href="/">yskmt </a></h1>
                 <nav><ul>
+                    <li><a href="/category/aws.html">AWS</a></li>
                     <li><a href="/category/blog.html">Blog</a></li>
                     <li><a href="/category/etc.html">etc</a></li>
                     <li><a href="/category/learning.html">Learning</a></li>
@@ -23,30 +24,76 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/theano:-convolutional-neural-network.html">Theano: Convolutional Neural Network</a></h1>
+                    <h1 class="entry-title"><a href="/imbalanced-datasets.html">Imbalanced Datasets</a></h1>
 <footer class="post-info">
-        <span>Wed 06 May 2015</span>
-<span>| tags: <a href="/tag/nn.html">nn</a><a href="/tag/theano.html">theano</a></span>
+        <span>Wed 20 May 2015</span>
+<span>| tags: <a href="/tag/blog.html">blog</a></span>
 </footer><!-- /.post-info --><!-- Status: draft -->
 
-<p>-
-  <a href="http://deeplearning.net/tutorial/lenet.html">Convolutional neural network</a>(lenet).
-    - Convolution
-    - Max-pooling
-    - Multilayer perception (hidden layer + logistic regression)</p>
+<h2><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5128907">Learning from Imbalanced Data</a></h2>
+<p>Good articles summarizing techniques to overcome imbalanced datasets.</p>
+<p><a href="http://www.reddit.com/r/MachineLearning/comments/12evgi/classification_when_80_of_my_training_set_is_of/">Reddit submission</a> about imbalanced datasets.</p>
+<h2>Some techniques for imbalanced datasets</h2>
 <ul>
-<li>
-<p>Useful info for setting up theano+gpu computation on AWS:
-  http://markus.com/install-theano-on-aws/</p>
+<li>Samplign methods<ul>
+<li>over/under-sampling</li>
+<li>informed sampling</li>
+</ul>
 </li>
-<li>
-<p>Elements in Statistical Learning: Ch4: Linear Methods and Classification</p>
+<li>Data generation<ul>
+<li>SMOTE</li>
+<li>Adaptive synthetic sampling</li>
+<li>Sampling with data cleaning</li>
+</ul>
 </li>
+<li>Cluster-based sampling</li>
+<li>Sampling and boosting integration</li>
+<li>Cost-sensitive methods - introduction of weights </li>
+<li>Kernel-based methods</li>
+</ul>
+<h2>Assesment matrices for imbalanced datasets</h2>
+<ul>
+<li>Accuracy, error rate</li>
+<li>Confusion matrix - true positive, false positive, true negative,
+  false negative</li>
+<li>ROC curve</li>
+<li>Precision-Recall curve</li>
+<li>Cost curves </li>
 </ul>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/stopping-aws-instance-from-cli.html" rel="bookmark"
+                           title="Permalink to Stopping AWS Instance from CLI">Stopping AWS Instance from CLI</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>Mon 11 May 2015</span>
+<span>| tags: <a href="/tag/cli.html">cli</a></span>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="/stopping-aws-instance-from-cli.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/theano:-convolutional-neural-network.html" rel="bookmark"
+                           title="Permalink to Theano: Convolutional Neural Network">Theano: Convolutional Neural Network</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>Wed 06 May 2015</span>
+<span>| tags: <a href="/tag/nn.html">nn</a><a href="/tag/theano.html">theano</a></span>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="/theano:-convolutional-neural-network.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -150,36 +197,6 @@
 <span>| tags: <a href="/tag/presentation.html">presentation</a></span>
 </footer><!-- /.post-info -->                
                 <a class="readmore" href="/ml_10_lessons.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/ml_norvig.html" rel="bookmark"
-                           title="Permalink to Norvig's Presentation about ML for Programming">Norvig's Presentation about ML for Programming</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Sun 08 March 2015</span>
-<span>| tags: <a href="/tag/presentation.html">presentation</a></span>
-</footer><!-- /.post-info -->                
-                <a class="readmore" href="/ml_norvig.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/useful_cli_apps.html" rel="bookmark"
-                           title="Permalink to Useful CLI Apps">Useful CLI Apps</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Thu 05 March 2015</span>
-<span>| tags: <a href="/tag/cli.html">cli</a></span>
-</footer><!-- /.post-info -->                
-                <a class="readmore" href="/useful_cli_apps.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
             </ol><!-- /#posts-list -->
